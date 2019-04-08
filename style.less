@@ -72,6 +72,9 @@ nav{
     width: 50%;
     justify-content: space-around;
     align-items: center;
+    .icon_menu{
+        display: none;
+    }
     
 }
 a{
@@ -81,6 +84,14 @@ a{
     font-family: 'Graphik';
     font-weight: 700;
 }
+.main_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    svg{
+        margin-bottom: 20px;
+    }
+}
 .btn{
     display: inline-block;
     color: #fff;
@@ -88,6 +99,7 @@ a{
     border-radius: 3px;
     padding: 0 19px 0 20px;
     line-height: 3.4em;
+    cursor: pointer;
     svg{
         margin-left: 15px
     }
@@ -98,16 +110,27 @@ a{
    
     background: transparent;
 }
+.btn_white{
+    color:#005DE8; 
+    border: none;
+    background: transparent;
+    margin-top: 50px;
+    padding: 0;
+    cursor: pointer;
+}
 .bg{
     background: url('img/main_bg.jpg') no-repeat center;
     background: cover;
     height: 100vh;
+    display: flex;
+    align-items: center;
     
 
 }
 .info_block{
     display: grid;
     grid-template-columns: 2fr 1fr;
+    position: relative;
    .btn{
         font-family: "Graphik";
         font-size: 1.3em;
@@ -120,6 +143,24 @@ a{
         font-weight: 400;
         margin-bottom: 120px
     } 
+    &:before{
+        content: url("img/square.svg") ;
+        position: absolute;
+        width:53px;
+        height:53px;
+        bottom: -20%;
+        left: 20%;
+
+    }
+    &:after{
+        content: url("img/round_small.svg") ;
+        position: absolute;
+        width:48px;
+        height:48px;
+        top: -25%;
+        left: 5%;
+
+    }
 }
 
 h1{
@@ -144,6 +185,7 @@ h3{
     margin-bottom: 40px;
     
 }
+
 h5{
     font-family: "Graphik";
     font-size: 1.8em;
@@ -161,6 +203,15 @@ h6{
     flex-direction: column;
     justify-content: flex-start;
     align-items: start;
+    &:after{
+        content: url("img/round-big.svg") ;
+        position: absolute;
+        width:128px;
+        height:128px;
+        bottom: 7%;
+        right: -10%;
+
+    }
 }
 .mouse{
     position: absolute;
@@ -179,6 +230,8 @@ h6{
 .item_statistika{
     display: flex;
     align-items: center;
+    max-width: 300px;
+    
     svg{
         margin-right: 20px;
     }
@@ -189,10 +242,31 @@ h6{
 .bg_black{
     color: white;
     background: @black;
+    overflow: hidden;
+    position: relative;
     .btn_transparent{
         color: white;
         border: 1px solid white;
+        margin-top: 30px;
     }
+}
+.round_left{
+    background: url('img/Group\ 2.3.svg') no-repeat;
+    position: absolute;
+    width: 85%;
+    height: 100%;
+    top: 0;
+    left:0;
+}
+.round_right{
+    background: url('img/Group\ 3.svg') no-repeat center;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right:0;
+    
 }
 .direction{
     display: flex;
@@ -201,6 +275,9 @@ h6{
     flex-wrap: wrap;
 
 
+}
+.narrow{
+    width: 50%;
 }
 .direction_item{
     width: 238px;
@@ -233,7 +310,7 @@ h6{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
+    
 }
 .project_item{
     display: flex;
@@ -332,4 +409,203 @@ h6{
 footer{
     background: @black;
     color: white;
+    padding: 60px 20px;
+    .wrapper{
+        p{
+            font-size: 1.4em;
+        }
+    }
+    
+    a{
+        color: white;
+        font-weight: normal;
+    }
+    .btn{
+        margin-bottom: 28px;
+    }
+    h5{
+        svg{
+            margin: 0 10px 0 -17px;
+        }
+    }
+    .form{
+        margin-right: 10px
+    }
+    hr{
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        margin: 20px 0
+    }
+}
+.group_logo{
+    max-width: 100%;
+}
+.all_footer{
+    display: grid;    
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-bottom: 25px;
+    font-weight: normal;
+}
+.contacts{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 10px;
+    a{
+        margin-left: 27px;
+        svg{
+            margin-left: -24px;
+        }
+    }
+}
+.geometka{
+    margin-right: 10px
+}
+.ps_footer{
+    display: flex;
+    justify-content: space-between;
+}
+@media screen and (max-width:1300px){
+    nav{
+        width: 100%;
+    }
+    .info_block {
+       
+        grid-template-columns: 1fr 1fr;
+    }
+    h1{
+        margin-right: 20px
+    }
+    .text{
+        
+        &:after{
+           
+            right: 0%;
+    
+        }
+    }
+}
+@media screen and (max-width:1000px){
+    .direction {
+        
+        justify-content: space-around;}
+    .project {       
+        flex-direction: column;
+    }
+    .project_item{
+        margin-bottom: 40px;
+    }
+    .tehnologi {
+        
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .statistika{
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .width_p{
+        width: 100%;
+    }
+    nav{
+        justify-content: flex-end;
+        a{
+            display: none;
+        }
+        .icon_menu{
+            display: block;
+            font-size: 50px;
+            margin: 0 20px;
+            
+        }
+    }
+}
+@media screen and (max-width:900px){
+    .all_footer {
+        
+        grid-template-columns: 1fr 1fr;
+       
+    }
+    .geometka{
+        margin-top: 40px;
+    }
+}
+@media screen and (max-width:800px){
+    .text{
+        
+        &:after{
+           
+            display: none;
+    
+        }
+    }
+    .info_block{
+        &:before{
+            display: none;
+    
+        }
+        &:after{
+            display: none;
+    
+        }
+    }
+}
+@media screen and (max-width:700px){
+    .tehnologi {
+        
+        grid-template-columns:  1fr 1fr 1fr;
+    }
+    .statistika {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .item_statistika{
+        margin-bottom: 30px;
+    }
+    .info_block {
+        grid-template-columns: 1fr;
+    }
+    h1{
+        margin-bottom: 30px;
+    }
+    
+}
+@media screen and (max-width:600px){
+    nav{
+        .btn{
+            display: none;
+        }
+    }
+    .tehnologi {
+        grid-template-columns: 1fr 1fr;
+    }
+    .info_block{
+        p{
+            margin-bottom: 60px;
+        }
+    }
+    .round_left{
+        width: 100%;
+    }
+    
+}
+@media screen and (max-width:600px){
+.tehnologi {
+        grid-template-columns:  1fr;
+    }
+}
+@media screen and (max-width:500px){
+    .all_footer {
+        text-align: center;    
+        line-height: 25px;
+        grid-template-columns: 1fr ;
+       
+    }
+    .contacts{
+        margin-top: 40px;
+    }
+    .round_right{
+        display: none;
+    }
+    .narrow{
+        width: 100%;
+    }
 }
