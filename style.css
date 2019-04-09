@@ -483,6 +483,12 @@ footer hr {
   .geometka {
     margin-top: 40px;
   }
+  .mouse {
+    display: none;
+  }
+  .tehnologi {
+    grid-template-columns: 1fr  1fr 1fr;
+  }
 }
 @media screen and (max-width: 800px) {
   .text:after {
@@ -496,9 +502,6 @@ footer hr {
   }
 }
 @media screen and (max-width: 700px) {
-  .tehnologi {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
   .statistika {
     flex-wrap: wrap;
     justify-content: center;
@@ -512,13 +515,13 @@ footer hr {
   h1 {
     margin-bottom: 30px;
   }
+  .tehnologi {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 @media screen and (max-width: 600px) {
   nav .btn {
     display: none;
-  }
-  .tehnologi {
-    grid-template-columns: 1fr 1fr;
   }
   .info_block p {
     margin-bottom: 60px;
@@ -546,5 +549,8 @@ footer hr {
   }
   .narrow {
     width: 100%;
+  }
+  .tehnologi {
+    grid-template-columns: 1fr;
   }
 }
